@@ -1,0 +1,15 @@
+[Unit]
+Description="cyberdog sudo"
+Wants=mi_preset.service
+After=mi_preset.service
+
+[Service]
+User=root
+Type=idle
+ExecStart=/bin/bash -c 'source /etc/mi/ros2_env.conf; rm -rf ~/.ros/log/*; ros2 launch cyberdog_bringup cyberdog_sudo.launch.py'
+TimeoutStopSec=1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+  

@@ -11,7 +11,8 @@ install/
 
 # swp files
 *.swp
+*.pyc
 
 .github
-cyberdog_tail/release/
-cyberdog_voice/release/
+/rec
+/training

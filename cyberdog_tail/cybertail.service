@@ -1,0 +1,14 @@
+[Unit]
+Description=cyberdog_tail
+Wants=mi_preset.service
+After=mi_preset.service
+
+[Service]
+User=root
+Type=idle
+WorkingDirectory=/home/mi/Downloads/CyberTailNode/
+ExecStart=/bin/bash -c 'source /etc/mi/ros2_env.conf;source install/setup.bash; ros2 run cyberdog_tail cyberdog_tail_main'
+TimeoutStartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+zhipuai
+PyAudio
+websocket-client
+pyserial
+ws4py
